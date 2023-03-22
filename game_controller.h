@@ -4,20 +4,21 @@
 
 #ifndef UNTITLED_GAME_CONTROLLER_H
 #define UNTITLED_GAME_CONTROLLER_H
-#include <iostream>
+#include "game_view.h"
 #include <conio.h>
-#include "game_model.h"
+
 
 class game_controller {
 
 public:
 //explicit
-    explicit game_controller(game_model& model);
-    void launch();
-    void updating();
+    game_controller(game_model& model1, game_view& view1) : model{model1}, view{view1} {}
+    void launch(game_model& model, game_view& view);
+    //void updating();
 
 private:
     game_model& model;
+    game_view& view;
 };
 
 

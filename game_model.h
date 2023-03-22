@@ -11,11 +11,8 @@ class game_model {
 public:
     int get_points();
     void add_points(int p);
-
 private:
-
     int points;
-
 
 };
 
